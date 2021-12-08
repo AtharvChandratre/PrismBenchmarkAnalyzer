@@ -16,7 +16,7 @@ ProposerBlockRolledBack = 'ProposerBlockRolledBack'
 epoch = datetime.utcfromtimestamp(0)
 
 def getTimestamp(timestr):
-    dateTimeObj = datetime.strptime(dateTimeString, '%Y-%m-%d %H:%M:%S,%f')
+    dateTimeObj = datetime.strptime(timestr, '%Y-%m-%d %H:%M:%S,%f')
     delta = dateTimeObj - epoch
     return delta.total_seconds()*1000
 
